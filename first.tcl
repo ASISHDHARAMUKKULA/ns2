@@ -15,7 +15,7 @@ $ns duplex-link $n0 $n1 2Mb 4ms DropTail
 
 set tcp1 [new Agent/TCP]
 
-set sink [new Agent/TCPSlink]
+set sink [new Agent/TCPSink]
 
 $ns attach-agent $n0 $tcp1
 $ns attach-agent $n1 $sink
@@ -38,9 +38,9 @@ exit
 
 
 
-$ns at .1 "ftp start"
+$ns at .1 "$ftp start"
 
-$ns at 2.0 "ftp stop"
+$ns at 2.0 "$ftp stop"
 
 $ns at 2.1
 
